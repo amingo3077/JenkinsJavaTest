@@ -1,0 +1,18 @@
+ssh root@172.16.9.13
+
+internalURL : "http://172.16.9.68:9696/"
+publicURL : "http://10.62.166.10:9696/"
+
+在本機上 先用publicURL 改完DB後
+在改成internalURL
+在壓成war檔包進去測試
+
+
+KH006的contex.xml keystone db要改
+A+002也是
+
+
+scp local_file remote_username@remote_ip:remote_folder
+
+============20141110==========ToDoList=================
+Release to SVN ASK casper modify

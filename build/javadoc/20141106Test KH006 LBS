@@ -1,0 +1,29 @@
+
+admin
+foxconn_adminpass
+4756c88c570345b091688cff0550b7f7
+admin
+http://10.62.166.9:5000/v2.0/tokens
+
+curl -k -X POST -v http://10.62.166.9:5000/v2.0/tokens -d "{\"auth\":{\"passwordCredentials\":{\"username\": \"admin\", \"password\":\"foxconn_adminpass\"}, \"tenantId\":\"4756c88c570345b091688cff0550b7f7\"}}" -H "Content-type: application/json"
+
+5dbe4fa6c5dc42cb986796fc9159a8e0
+http://10.62.166.10:9696/
+================================================================================================================
+//get temp token
+curl -k -X POST -v http://10.62.166.9:5000/v2.0/tokens -d "{\"auth\":{\"passwordCredentials\":{\"username\": \"1@fox.com\", \"password\":\"e10adc3949ba59abbe56e057f20f883e\"}}}" -H "Content-type: application/json"
+
+//get tenant id =>cannot use on admin
+
+curl -X "GET" -H "X-Auth-Token: 347cdedb68124c8889e96d0fc0b38559" http://10.62.166.9:5000/v2.0/tenants
+
+curl -k -X POST -v http://10.62.166.9:5000/v2.0/tokens -d "{\"auth\":{\"passwordCredentials\":{\"username\": \"1@fox.com\", \"password\":\"e10adc3949ba59abbe56e057f20f883e\"}, \"tenantId\":\"0c03011823f24f4594a6aaeeeda2e2f9\"}}" -H "Content-type: application/json"
+
+
+98a3dd8a950f4db3b144676c3f2f6aab
+
+=========================================
+curl -k -X GET -v http://10.62.166.10:9696//v2.0/subnets -d "{\"pool\":{\"subnet_id\": \"65854188-2f15-4fb9-ab71-854073afcaf1\", \"lb_method\":\"ROUND_ROBIN\", \"protocol\":\"HTTP\", \"name\":\"amingoPool1\", \"admin_state_up\":\"true\"}}" -H "X-Auth-Token: 6fb3408cbaec46599435c287ccb6e9e9" -H "Content-Type: application/json" -H "Accept: application/json" -H "User-Agent: python-neutronclient"
+
+
+curl -i http://172.16.9.68:9696/v2.0//subnets -X GET -H "X-Auth-Token: 6313cf6e516b4eefa2b8bc9d95ee5dbf"
