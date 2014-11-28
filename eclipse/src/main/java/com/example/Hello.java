@@ -6,6 +6,6 @@ public class Hello {
 	public static void main(String args[]) {
 		System.out.println("Hello World!");
 		System.out.println(StringUtils.isBlank("test"));
-		System.out.println(StringUtils.isBlank("test-haha111111111"));
+		System.out.println(StringUtils.isBlank("test-haha111111111xxxxxx"));
 	}
 }
